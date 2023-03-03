@@ -56,9 +56,9 @@ Host ML1
 
 ## Создание контейнера и подключение к нему
 
-# Подробности
+<i>TODO</i>: Расписать подробнее
 
-devcontainer cli
-
-devcontainer build --workspace-folder . --image-name miniconda-devcontainer:latest
-docker create --mount type=bind,source=/home/tcaty/Programming/work/python/container-a,target=/usr/src
+1. Как обычно создать контейнер
+2. Установить расширение <b>Dev containers</b>
+3. Запустить контейнер и с помощью данного расширения подключиться к нему
+4. Профит
