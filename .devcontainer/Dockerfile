@@ -5,6 +5,8 @@ ARG SCRIPTS_DIR=${DISTDIR}/scripts
 ARG DOWNLOAD_VSCODE_SERVER_SCRIPT=${SCRIPTS_DIR}/download-vscode-server.sh
 ARG INSTALL_VSCODE_EXTENSIONS_SCRIPT=${SCRIPTS_DIR}/install-vscode-extensions.sh
 
+WORKDIR /root
+
 COPY ${DISTDIR} ${DISTDIR}
 
 RUN apt-get update && \
@@ -15,6 +17,7 @@ RUN chmod +x ${DOWNLOAD_VSCODE_SERVER_SCRIPT} && \
 
 RUN chmod +x ${INSTALL_VSCODE_EXTENSIONS_SCRIPT} && \
     bash -c ${INSTALL_VSCODE_EXTENSIONS_SCRIPT}
+
 
 FROM continuumio/miniconda3:master
 
